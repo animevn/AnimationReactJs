@@ -81,3 +81,70 @@ body{
     animation-duration: 4s;
     animation-timing-function: linear;
 }
+
+/*zoom in*/
+@keyframes zoomIn {
+    0%   {transform: scale(1, 1)}
+    100% {transform: scale(2, 2)}
+}
+
+/*noinspection ALL*/
+.zoom-in{
+    animation-name: zoomIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+/*zoom out*/
+@keyframes zoomOut {
+    0%   {transform: scale(1, 1)}
+    100% {transform: scale(0.5, 0.5)}
+}
+
+/*noinspection ALL*/
+.zoom-out{
+    animation-name: zoomOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+/*left in*/
+@keyframes leftIn {
+    0%   {transform: translateX(-100%)}
+    100% {transform: translateX(0)}
+}
+
+/*noinspection ALL*/
+.left-in{
+    animation-name: leftIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+/*left in*/
+@keyframes rightIn {
+    0%   {transform: translateX(100%)}
+    100% {transform: translateX(0)}
+}
+
+/*noinspection ALL*/
+.right-in{
+    animation-name: rightIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

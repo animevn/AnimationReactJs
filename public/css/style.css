@@ -9,10 +9,6 @@ body{
     background-color: transparent;
 }
 
-.text-link{
-    color: #005cbf;
-}
-
 .main{
     display: flex;
     min-height: 100vh;
@@ -20,25 +16,68 @@ body{
     justify-content: space-between;
 }
 
+/*rotate left*/
 @keyframes rotateLeft {
     0%   {transform: rotate(0)}
     100% {transform: rotate(-720deg)}
 }
 
+/*noinspection ALL*/
 .rotatate-left{
     animation-name: rotateLeft;
     animation-duration: 2s;
     animation-timing-function: linear;
 }
 
+/*rotate right*/
 @keyframes rotateRight {
     0%   {transform: rotate(0)}
     100% {transform: rotate(720deg)}
 }
 
+/*noinspection ALL*/
 .rotatate-right{
     animation-name: rotateRight;
     animation-duration: 2s;
     animation-timing-function: linear;
 }
 
+/*fade in*/
+@keyframes fadeIn {
+    0%   {filter: opacity(0)}
+    100% {filter: opacity(100%)}
+}
+
+/*noinspection ALL*/
+.fade-in{
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+/*fade out*/
+@keyframes fadeOut {
+    0%   {filter: opacity(100)}
+    100% {filter: opacity(0%)}
+}
+
+/*noinspection ALL*/
+.fade-out{
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+/*fade in out*/
+@keyframes fadeInOut {
+    0%   {filter: opacity(100%)}
+    50%  {filter: opacity(0)}
+    100% {filter: opacity(100%)}
+}
+
+/*noinspection ALL*/
+.fade-in-out{
+    animation-name: fadeInOut;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+}

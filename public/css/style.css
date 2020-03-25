@@ -121,7 +121,7 @@ body{
     animation-timing-function: linear;
 }
 
-/*left in*/
+/*right in*/
 @keyframes rightIn {
     0%   {transform: translateX(100%)}
     100% {transform: translateX(0)}
@@ -134,8 +134,44 @@ body{
     animation-timing-function: linear;
 }
 
+/*top bot*/
+@keyframes topBot {
+    0%   {transform: translateY(-100%)}
+    100% {transform: translateY(0)}
+}
 
+/*noinspection ALL*/
+.top-bot{
+    animation-name: topBot;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
 
+/*flash*/
+@keyframes flashing {
+    0%   {filter: opacity(100%)}
+    100% {filter: opacity(0)}
+}
+
+/*noinspection ALL*/
+.flash{
+    animation-name: flashing;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 10;
+}
+
+@keyframes bouncing {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0)}
+    40% {transform: translateY(-30px)}
+    60% {transform: translateY(-15px)}
+}
+
+.bounce{
+    animation-name: bouncing;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
 
 
 

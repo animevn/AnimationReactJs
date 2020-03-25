@@ -8,6 +8,10 @@ function Home() {
     setStyle("rotatate-left");
   }
 
+  function rotateRight() {
+    setStyle("rotatate-right");
+  }
+
   function handleAnimationEnd() {
     setStyle("");
   }
@@ -26,7 +30,9 @@ function Home() {
             Rotate Left
           </button>
 
-          <button className="btn btn-outline-success">Rotate Right</button>
+          <button className="btn btn-outline-success" onClick={rotateRight}>
+            Rotate Right
+          </button>
         </div>
       </div>
 

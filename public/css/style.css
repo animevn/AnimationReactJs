@@ -20,13 +20,25 @@ body{
     justify-content: space-between;
 }
 
+@keyframes rotateLeft {
+    0%   {transform: rotate(0)}
+    100% {transform: rotate(-720deg)}
+}
+
 .rotatate-left{
     animation-name: rotateLeft;
     animation-duration: 2s;
     animation-timing-function: linear;
 }
 
-@keyframes rotateLeft {
+@keyframes rotateRight {
     0%   {transform: rotate(0)}
-    100% {transform: rotate(-720deg)}
+    100% {transform: rotate(720deg)}
 }
+
+.rotatate-right{
+    animation-name: rotateRight;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+

@@ -64,7 +64,7 @@ function Home() {
     <Grid container direction="column" justify="center" alignItems="center">
       <Grid item {...width}>
         <Box my={3} display="flex" flexDirection="row" justifyContent="center" py={6}
-             border={1} borderRadius={5} borderColor="orange">
+             border={1} borderRadius={5} borderColor="orange" boxShadow={2}>
           <img className={style} style={{"width":"50%"}}
                src="/images/image.png" onAnimationEnd={handleAnimationEnd} alt="rleft">
           </img>

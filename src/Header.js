@@ -9,7 +9,7 @@ function Header() {
   // const fontSize = {xs:"1.5rem", sm:"2rem", md:"2.5rem", lg:"3rem", xl:"3rem"};
 
   return (
-    <Box bgcolor="primary.main" py={{...padding}} >
+    <Box bgcolor="primary.main" py={{...padding}} boxShadow={3}>
       <Box fontWeight="fontWeightBold" mx={{...margin}}>
         <Typography variant="h3">Animation</Typography>
       </Box>

@@ -1,7 +1,11 @@
 import React, {useState} from "react";
+import Grid from "@material-ui/core/Grid";
+import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
+import "./Home.css";
 
 function Home() {
-
+  const width = {xs:10, sm:8, md:6, lg:4, xl:4};
   const [style, setStyle] = useState("");
 
   function handleAnimationEnd() {
@@ -57,86 +61,93 @@ function Home() {
   }
 
   return (
-    <div className="container mt-5 ">
-      <div className="container d-flex overflow-hidden">
-        <img className={"col-xl-3 col-lg-4 col-md-5 col-sm-6 col-6 mx-auto " + style}
-             src="/images/image.png" onAnimationEnd={handleAnimationEnd} alt="rleft">
-        </img>
-      </div>
+    <Grid container direction="column" justify="center" alignItems="center">
+      <Grid item {...width}>
+        <Box my={3} display="flex" flexDirection="row" justifyContent="center" py={3}>
+          <img className={style} style={{"width":"60%"}}
+               src="/images/image.png" onAnimationEnd={handleAnimationEnd} alt="rleft">
+          </img>
+        </Box>
 
-      <div className="container col-xl-5 col-lg-6 col-md-8 col-sm-10 col-10">
+        <Box my={3} display="flex" flexDirection="column"
+             justifyContent="space-around" py={3}>
 
-        <div className="container mt-5">
-          <div className="row d-flex justify-content-between">
-            <button className="btn btn-outline-success" onClick={rotateLeft}>
+          <Box display="flex" flexDirection="row" justifyContent="space-around" pb={3}>
+            <Button variant="contained" color="primary" 
+                    onClick={rotateLeft}>
               Rotate Left
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={rotateRight}>
+            <Button variant="contained" color="primary" 
+                    onClick={rotateRight}>
               Rotate Right
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Box>
 
-        <div className="container mt-4">
-          <div className="row d-flex justify-content-between">
-            <button className="btn btn-outline-success" onClick={fadeIn}>
+          <Box display="flex" flexDirection="row" justifyContent="space-around" pb={3}>
+            <Button variant="contained" color="primary" 
+                    onClick={fadeIn}>
               Fade In
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={fadeInOut}>
+            <Button variant="contained" color="primary" 
+                    onClick={fadeInOut}>
               Fade In Out
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={fadeOut}>
+            <Button variant="contained" color="primary" 
+                    onClick={fadeOut}>
               Fade Out
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Box>
 
-        <div className="container mt-4">
-          <div className="row d-flex justify-content-between">
-            <button className="btn btn-outline-success" onClick={zoomIn}>
+          <Box display="flex" flexDirection="row" justifyContent="space-around" pb={3}>
+
+            <Button variant="contained" color="primary" 
+                    onClick={zoomIn}>
               Zoom In
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={zoomOut}>
+            <Button variant="contained" color="primary" 
+                    onClick={zoomOut}>
               Zoom Out
-            </button>
-          </div>
-        </div>
+            </Button>
 
-        <div className="container mt-4">
-          <div className="row d-flex justify-content-between">
-            <button className="btn btn-outline-success" onClick={leftIn}>
+          </Box>
+
+          <Box display="flex" flexDirection="row" justifyContent="space-around" pb={3}>
+            <Button variant="contained" color="primary" 
+                    onClick={leftIn}>
               Left In
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={topBot}>
+            <Button variant="contained" color="primary" 
+                    onClick={topBot}>
               Top Bot
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={rightIn}>
+            <Button variant="contained" color="primary" 
+                    onClick={rightIn}>
               Right In
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Box>
 
-        <div className="container mt-4">
-          <div className="row d-flex justify-content-between">
-            <button className="btn btn-outline-success" onClick={bounce}>
+          <Box display="flex" flexDirection="row" justifyContent="space-around">
+            <Button variant="contained" color="primary" 
+                    onClick={bounce}>
               Bounce
-            </button>
+            </Button>
 
-            <button className="btn btn-outline-success" onClick={flash}>
+            <Button variant="contained" color="primary" 
+                    onClick={flash}>
               Flash
-            </button>
-          </div>
-        </div>
+            </Button>
+          </Box>
 
-      </div>
+        </Box>
 
-    </div>
+      </Grid>
+    </Grid>
   )
 }
 

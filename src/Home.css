@@ -1,21 +1,3 @@
-/*This one is for all page, basically page will includes two div, one is main, the other */
-/*is footer-custom, everything else inside main */
-html, body{
-    height: 100%;
-    background-color: oldlace;
-}
-
-body{
-    background-color: transparent;
-}
-
-.main{
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 /*rotate left*/
 @keyframes rotateLeft {
     0%   {transform: rotate(0)}
